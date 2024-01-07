@@ -10,7 +10,7 @@ const refs = {
 
 let page = null;
 let query = '';
-let imagesLightBox = {};
+let imagesLightBox = new SimpleLightbox('.gallery a');
 
 let options = {
   root: null,
@@ -75,7 +75,7 @@ const onFormSubmit = async e => {
     const imagesMarkup = createImagesTemplte(results);
     refs.gallery.insertAdjacentHTML('beforeend', imagesMarkup);
 
-    imagesLightBox = new SimpleLightbox('.gallery a');
+    imagesLightBox.refresh();
     hasMoreImages(totalHits);
   } catch (error) {
     return Notify.failure(error.message);

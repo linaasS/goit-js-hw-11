@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://pixabay.com/api';
+axios.defaults.baseURL = 'https://pixabay.com/api/';
 // axios.defaults.headers.common['Authorization'] =
 //   '41224920-e0172563ca95fa25f351d5f8a';
 
